@@ -1,0 +1,38 @@
+.nav {
+    background: colour(nav);
+    backdrop-filter: blur(10px);
+    @include borderBottom;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+    &__menu {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        list-style-type: none;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    &__item {
+        margin: auto 1.8em;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: colour(primary);
+
+        transition-duration: transitionDuration(hover--fast);
+
+        &:hover {
+            border-bottom: 4px solid colour(hover);
+        }
+    }
+
+    &__img {
+        height: 70px;
+        padding: 0.4em;
+    }
+}

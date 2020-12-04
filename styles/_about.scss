@@ -1,0 +1,44 @@
+.about {
+    display: grid;
+    grid-template-rows: 1.2fr;
+
+    &__text {
+        &--head {
+            text-align: center;
+            line-height: lineHeight(3);
+            font-weight: weight(semi-bold);
+            margin-bottom: 1.4em;
+            color: colour(primary);
+        }
+        &--body {
+            line-height: lineHeight(1);
+            color: colour(secondary);
+        }
+    }
+    &__socials {
+        &--head {
+            color: colour(primary);
+            line-height: lineHeight(1.75);
+            text-align: center;
+            margin: 2em 0 1em 0;
+        }
+
+        &--icons {
+            @include flexSpaceEvenly;
+        }
+
+        &--icon {
+            color: colour(secondary);
+            font-size: size(icon--sm);
+
+            svg {
+                transition-duration: transitionDuration(hover--med);
+            }
+        }
+    }
+
+    &__img {
+        margin: 5rem 0;
+        width: 100%;
+    }
+}

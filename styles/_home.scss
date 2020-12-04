@@ -1,0 +1,46 @@
+.home {
+    height: 100vh;
+    width: 100vw;
+    @include flexCenter(column);
+    text-align: center;
+
+    &__img {
+        width: 80%;
+    }
+
+    &__text {
+        line-height: lineHeight(3);
+
+        &--name {
+            font-weight: weight(regular);
+            color: colour(tertiary);
+            margin: 0.6em;
+        }
+
+        &--profession {
+            color: colour(primary);
+            font-weight: weight(medium);
+        }
+    }
+
+    &__CTA {
+        animation: bounce 1.3s infinite;
+
+        color: colour(secondary);
+        font-size: size(icon--xl);
+        margin-top: 0.3em;
+
+        svg {
+            transition-duration: transitionDuration(hover--slow);
+        }
+    }
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(4vh)
+    }
+    100% {
+        transform: translateY(0vh);
+    }
+}

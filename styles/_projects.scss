@@ -1,0 +1,85 @@
+.projects {
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2em;
+    }
+
+    &__card {
+        position: relative;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+
+        &--info {
+            background-color: colour(primary);
+            background: radial-gradient(circle, rgba(51,51,51,1) 0%, rgb(155, 155, 155) 60%, rgba(97, 97, 97, 0) 74%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            font-size: size(icon--md);
+            color: colour(light);
+            right: 0.4em;
+            top: 0.4em;
+            cursor: pointer;
+            transition-duration: transitionDuration(hover--fast);
+        }
+        &--img {
+            width: 100%;
+            object-fit: cover;
+            @include borderBottom;
+        }
+        &--name {
+            color: colour(primary);
+            font-weight: weight(regular);
+            line-height: 1;
+            margin-bottom: auto;
+        }
+        &--category {
+            color: colour(primary);
+            opacity: 0.7;
+            margin-top: auto;
+        }
+        &--github {
+            color: colour(primary);
+            font-size: size(icon--xs);
+            text-align: center;
+            transition-duration: transitionDuration(hover--fast);
+        }
+        &--visit {
+            color: colour(primary);
+            font-size: size(text--sm);
+            text-decoration: none;
+            transition-duration: transitionDuration(hover--fast);
+        }
+    }
+
+    &__details {
+        background-color: rgba(75, 75, 75, 0.75);
+        backdrop-filter: blur(12px);
+        padding: 1em;
+        height: 81%;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        color: colour(light);
+        opacity: 1;
+
+        &--info {
+            margin-top: 3em;
+            text-align: left;
+            line-height: lineHeight(1);
+        }
+    }
+    &__tech {
+        &--head {
+            margin: 1em 0 0.25em 0;
+            font-weight: weight(medium);
+        }
+    }
+
+    &__about {
+        margin: 0.5em;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: 0.3em;
+        text-align: left;
+    }
+}

@@ -1,0 +1,42 @@
+.footer {
+    @include flexCenter(column);
+
+    border-top: solid $colour-brand 0.25rem;
+
+    &__scrollTop {
+        text-align: center;
+        background: #DDDDDD;
+        width: 3.8rem;
+        border-radius: 3px;
+        font-size: size(icon--lg);
+        transform: translateY(-50%);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+        color: colour(primary);
+        
+        svg {
+            transition-duration: transitionDuration(hover--slow);
+        }
+    }
+
+    &__socials--icons {
+        @include flexSpaceEvenly;
+        width: 80%;
+    }
+
+    &__socials--icon {
+        color: colour(secondary);
+        font-size: size(icon--lg);
+
+        svg {
+            transition-duration: transitionDuration(hover--med);
+        }
+    }
+
+
+    &__copyright {
+        color: colour(primary);
+        font-size: size(text--sm);
+        opacity: 0.7;
+        padding: 2em 0;
+    }
+}
