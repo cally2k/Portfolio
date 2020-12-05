@@ -23,35 +23,18 @@ $colours: (
     'tertiary': #606060,
     'light': #BDBDBD,
     'hover': #5296F0,
-    'active': #006EFF
+    'active': #006EFF,
+    'disabled': #BDBDBD
 );
 
 @function colour($colour-name) {
     @return map-get($colours, $colour-name)
 };
 
-// Layout
-$colour-brand: #5296F0;
-$colour-LC: #BDBDBD;
-$colour-MC: #878787;
-$colour-HC: #353535;
-
-// Denotive
-$colour-error: #FF6262;
-$colour-success: #63FF7C;
-$colour-disabled: #BDBDBD;
-
-// Interactive
-$colour-1: #006EFF;
-$colour-2: #3484EE;
-$colour-3: #5296F0;
-$colour-4: #6BA3EF;
-$colour-5: #7DB1F6;
-
 // -- Box Model--
 
 @mixin borderBottom {
-    border-bottom: solid $colour-brand 4px;
+    border-bottom: solid colour(hover) 4px;
 }
 
 // -- Layout --

@@ -19,6 +19,24 @@
 
 // Laptop - >= 900px
 @include media-md {
+    .burger {
+        visibility: hidden;
+    }
+    .nav {
+        position: sticky;
+        transform: translateX(0);
+        visibility: visible;
+        height: auto;
+
+        &__menu {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        &__item {
+            transform: translateX(0);
+        }
+    }
+
     .skills, .projects{
         padding: 8rem 6%;
     }

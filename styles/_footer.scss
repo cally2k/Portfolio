@@ -1,7 +1,7 @@
 .footer {
     @include flexCenter(column);
 
-    border-top: solid $colour-brand 0.25rem;
+    border-top: solid colour(hover) 0.25rem;
 
     &__scrollTop {
         text-align: center;

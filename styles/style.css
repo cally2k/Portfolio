@@ -87,6 +87,84 @@ body {
   }
 }
 
+.burger {
+  background: #D4D4D4C2;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  padding: 1.4rem;
+  border-radius: 50px;
+  position: fixed;
+  z-index: 2;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 26px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.burger__menu {
+  margin: auto;
+  position: fixed;
+  width: 26px;
+  height: 3px;
+  background: #5296F0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger__menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 26px;
+  height: 3px;
+  background: #5296F0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger__menu::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 26px;
+  height: 3px;
+  background: #5296F0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger__menu.open {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: transparent;
+}
+
+.burger__menu.open::before {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+
+.burger__menu.open::after {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+
 .nav {
   background: #D4D4D4C2;
   -webkit-backdrop-filter: blur(10px);
@@ -95,17 +173,29 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 1;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.nav.open {
+  visibility: visible;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .nav__menu {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
-      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
   list-style-type: none;
   text-align: center;
   margin-left: auto;
@@ -113,6 +203,15 @@ body {
 
 .nav__item {
   margin: auto 1.8em;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.nav__item.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .nav__link {
@@ -130,6 +229,31 @@ body {
 .nav__img {
   height: 70px;
   padding: 0.4em;
+}
+
+.nav__item:nth-child(1) {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.nav__item:nth-child(2) {
+  -webkit-transition-delay: 0.15s;
+          transition-delay: 0.15s;
+}
+
+.nav__item:nth-child(3) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav__item:nth-child(4) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.nav__item:nth-child(5) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .about {
@@ -386,6 +510,25 @@ body {
 }
 
 @media screen and (min-width: 900px) {
+  .burger {
+    visibility: hidden;
+  }
+  .nav {
+    position: -webkit-sticky;
+    position: sticky;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    visibility: visible;
+    height: auto;
+  }
+  .nav__menu {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+  }
+  .nav__item {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
   .skills, .projects {
     padding: 8rem 6%;
   }
