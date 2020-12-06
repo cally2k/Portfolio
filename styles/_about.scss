@@ -1,6 +1,4 @@
 .about {
-    display: grid;
-    grid-template-rows: 1.2fr;
 
     &__text {
         &--head {
@@ -40,5 +38,6 @@
     &__img {
         margin: 5rem 0;
         width: 100%;
+        display: none;
     }
 }

@@ -15,6 +15,10 @@
     .about, .skills, .projects, .contact {
         padding: 8rem 15%;
     }
+
+    .home__img {
+        width: 40%;
+    }
 }
 
 // Laptop - >= 900px
@@ -30,11 +34,16 @@
 
         &__menu {
             grid-template-columns: repeat(5, 1fr);
+            padding: 0;
         }
 
         &__item {
             transform: translateX(0);
         }
+    }
+
+    .home__img {
+        width: 30%;
     }
 
     .skills, .projects{
@@ -53,7 +62,19 @@
 
 // Desktop - >= 1200px
 @include media-lg {
+    .about {
+        display: grid;
+        grid-template-columns: 1.2fr 2fr;
+        grid-gap: 3em;
 
+        &__img {
+            display: block;
+        }
+    }
+
+    .home__img {
+        width: 20%;
+    }
 }
 
 // Desktop (Large) - >= 1800px
