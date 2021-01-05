@@ -7,6 +7,7 @@
     }
 
     &__card {
+        background: colour(body);
         position: relative;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 
@@ -22,9 +23,10 @@
             transition-duration: transitionDuration(hover--fast);
         }
         &--img {
+            display: block;
             width: 100%;
             object-fit: cover;
-            @include borderBottom;
+
         }
         &--name {
             color: colour(primary);
@@ -52,18 +54,15 @@
     }
 
     &__details {
-        background-color: rgba(75, 75, 75, 0.75);
-        backdrop-filter: blur(12px);
+        backdrop-filter: brightness(0.6) blur(12px);
         padding: 1em;
-        height: 81%;
+        height: 75%;
         position: absolute;
         top: 0;
         text-align: center;
         color: colour(light);
-        opacity: 1;
 
         &--info {
-            margin-top: 3em;
             text-align: left;
             line-height: lineHeight(1);
         }
@@ -76,7 +75,9 @@
     }
 
     &__about {
-        margin: 0.5em;
+        border-top: solid colour(hover) 4px;
+        z-index: 3;
+        padding: 0.5em;
         display: grid;
         grid-template-columns: 1fr auto;
         grid-gap: 0.3em;

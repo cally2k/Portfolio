@@ -342,6 +342,7 @@ body {
 }
 
 .projects__card {
+  background: #FFFFFF;
   position: relative;
   -webkit-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -361,10 +362,10 @@ body {
 }
 
 .projects__card--img {
+  display: block;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-bottom: solid #5296F0 4px;
 }
 
 .projects__card--name {
@@ -397,20 +398,17 @@ body {
 }
 
 .projects__details {
-  background-color: rgba(75, 75, 75, 0.75);
-  -webkit-backdrop-filter: blur(12px);
-          backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: brightness(0.6) blur(12px);
+          backdrop-filter: brightness(0.6) blur(12px);
   padding: 1em;
-  height: 81%;
+  height: 75%;
   position: absolute;
   top: 0;
   text-align: center;
   color: #BDBDBD;
-  opacity: 1;
 }
 
 .projects__details--info {
-  margin-top: 3em;
   text-align: left;
   line-height: 1.45;
 }
@@ -421,7 +419,9 @@ body {
 }
 
 .projects__about {
-  margin: 0.5em;
+  border-top: solid #5296F0 4px;
+  z-index: 3;
+  padding: 0.5em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr auto;
