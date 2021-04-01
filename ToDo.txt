@@ -1,0 +1,21 @@
+Additions:
+
+close nav menu after clicking an option
+
+contact section overhaul
+
+portfolio card info 
+
+SEO:
+
+    Performance:
+                    properly size image (esp. mobile)
+                    webp format (esp. mobile)
+                    'efficient cache policy'
+
+    Accessibility:  
+                    heading elements not in a sequentially descending order
+                    links do not have a discernable name
+
+    Best Practices:
+                    browser errors logged (favicon)
