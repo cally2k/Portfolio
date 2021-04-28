@@ -1,21 +1,21 @@
-Additions:
+To Do: 
 
-close nav menu after clicking an option
+--General--
+dark mode
 
-contact section overhaul
+domain + hosting
 
-portfolio card info 
 
-SEO:
+--SEO--
 
-    Performance:
-                    properly size image (esp. mobile)
-                    webp format (esp. mobile)
-                    'efficient cache policy'
+Performance:
+                properly size image (esp. mobile)
+                webp format (esp. mobile)
+                'efficient cache policy'
 
-    Accessibility:  
-                    heading elements not in a sequentially descending order
-                    links do not have a discernable name
+Accessibility:  
+                heading elements not in a sequentially descending order
+                links do not have a discernable name
 
-    Best Practices:
-                    browser errors logged (favicon)
+Best Practices:
+                browser errors logged (favicon)
