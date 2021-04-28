@@ -5,6 +5,8 @@ dark mode
 
 domain + hosting
 
+favicon
+
 
 --SEO--
 
