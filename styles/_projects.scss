@@ -26,7 +26,6 @@
             display: block;
             width: 100%;
             object-fit: cover;
-
         }
         &--name {
             color: colour(primary);
@@ -34,16 +33,16 @@
             line-height: 1;
             margin-bottom: auto;
         }
-        &--category {
-            color: colour(primary);
-            opacity: 0.7;
-            margin-top: auto;
-        }
         &--github {
             color: colour(primary);
             font-size: size(icon--xs);
             text-align: center;
             transition-duration: transitionDuration(hover--fast);
+        }
+        &--category {
+            color: colour(primary);
+            opacity: 0.7;
+            margin-top: auto;
         }
         &--visit {
             color: colour(primary);
@@ -53,34 +52,88 @@
         }
     }
 
-    &__details {
-        backdrop-filter: brightness(0.6) blur(12px);
-        padding: 1em;
-        height: 75%;
-        position: absolute;
-        top: 0;
-        text-align: center;
-        color: colour(light);
+    &__card {
+        background: colour(body);
+        position: relative;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 
-        &--info {
+        &Head {
+            @include flexCenter (column);
+
+            &--img {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+                transition-duration: transitionDuration(hover--med);
+            }
+            &--info{
+                color: colour(body);
+                font-weight: weight(regular);
+                line-height: 1;
+                margin-bottom: auto;
+                opacity: 0;
+                position: absolute;
+                top: 0%;
+                padding: 2em;
+                transition-duration: transitionDuration(hover--med);
+            }
+            &--techHead {
+                color: colour(body);
+                opacity: 0;
+                top: 43%;
+                position: absolute;
+                transition-duration: transitionDuration
+            }
+            &--techBody {
+                color: colour(body);
+                opacity: 0;
+                top: 52%;
+                position: absolute;
+                transition-duration: transitionDuration
+            }
+
+            &:hover {
+                img {
+                    filter: blur(3px) brightness(40%);
+                }
+                h4, p {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &Body {
+            border-top: solid #5296F0 4px;
+            z-index: 3;
+            padding: 0.5em;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            grid-gap: 0.3em;
             text-align: left;
-            line-height: lineHeight(1);
-        }
-    }
-    &__tech {
-        &--head {
-            margin: 1em 0 0.25em 0;
-            font-weight: weight(medium);
-        }
-    }
 
-    &__about {
-        border-top: solid colour(hover) 4px;
-        z-index: 3;
-        padding: 0.5em;
-        display: grid;
-        grid-template-columns: 1fr auto;
-        grid-gap: 0.3em;
-        text-align: left;
+            &--name {
+                color: colour(primary);
+                font-weight: weight(regular);
+                line-height: 1;
+                margin-bottom: auto;
+            }
+            &--github {
+                color: colour(primary);
+                font-size: size(icon--xs);
+                text-align: center;
+                transition-duration: transitionDuration(hover--fast);
+            }
+            &--category {
+                color: colour(primary);
+                opacity: 0.7;
+                margin-top: auto;
+            }
+            &--visit {
+                color: colour(primary);
+                font-size: size(text--sm);
+                text-decoration: none;
+                transition-duration: transitionDuration(hover--fast);
+            }
+        }
     }
 }
