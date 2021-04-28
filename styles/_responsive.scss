@@ -5,14 +5,14 @@
 
 // Mobile - =< 599px
 @include media-xs {
-    .about, .skills, .projects, .contact {
+    .about, .skills, .projects, .photography{
         padding: 8rem 3%;
     }
 }
 
 // Tablet - >= 600px
 @include media-sm {
-    .about, .skills, .projects, .contact {
+    .about, .skills, .projects, .photography{
         padding: 8rem 15%;
     }
 
@@ -46,15 +46,15 @@
         width: 30%;
     }
 
-    .skills, .projects{
+    .skills, .projects, .photography{
         padding: 8rem 6%;
     }
 
     .skills__sections {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .projects__cards {
+    .projects__cards,  .photography__cards {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 4em;
     }

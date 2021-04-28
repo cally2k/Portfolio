@@ -100,10 +100,6 @@
         color: colour(primary);
 
         transition-duration: transitionDuration(hover--fast);
-
-        &:hover {
-            border-bottom: 4px solid colour(hover);
-        }
     }
 
     &__img {
@@ -113,7 +109,7 @@
 }
 
 @for $i from 1 through 5 {
-    .nav__item:nth-child(#{$i}) {
+    .nav__em:nth-child(#{$i}) {
         transition-delay: ($i * 0.05s) + 0.05s;
     }
 }
