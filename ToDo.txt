@@ -3,10 +3,6 @@ To Do:
 --General--
 dark mode
 
-domain + hosting
-
-favicon
-
 
 --SEO--
 
@@ -18,6 +14,3 @@ Performance:
 Accessibility:  
                 heading elements not in a sequentially descending order
                 links do not have a discernable name
-
-Best Practices:
-                browser errors logged (favicon)
