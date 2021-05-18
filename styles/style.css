@@ -475,20 +475,19 @@ body {
   padding: 2em 0;
 }
 
-body .error {
+.error {
   height: 100vh;
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-body .error--text {
+.error--text {
   display: block;
   color: #FF6961;
   margin-bottom: 0.6em;
 }
-body .error--link {
+.error--link {
   color: #353535;
   font-size: clamp(1.125rem, 6.25vw, 1.15rem);
   text-decoration: none;
