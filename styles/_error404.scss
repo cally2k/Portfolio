@@ -1,19 +1,16 @@
-body {
-    .error {
-        height: 100vh;
-        text-align: center;
-        @include flexCenter (column);
+.error {
+    height: 100vh;
+    @include flexCenter (column);
 
-        &--text {
-            display: block;
-            color: colour(error);
-            margin-bottom: 0.6em;
-        }
-        &--link {
-            color: colour(primary);
-            font-size: size(text--sm);
-            text-decoration: none;
-            transition-duration: transitionDuration(hover--med);
-        }
+    &--text {
+        display: block;
+        color: colour(error);
+        margin-bottom: 0.6em;
+    }
+    &--link {
+        color: colour(primary);
+        font-size: size(text--sm);
+        text-decoration: none;
+        transition-duration: transitionDuration(hover--med);
     }
 }
