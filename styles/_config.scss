@@ -24,7 +24,8 @@ $colours: (
     'light': #BDBDBD,
     'hover': #5296F0,
     'active': #006EFF,
-    'disabled': #BDBDBD
+    'disabled': #BDBDBD,
+    'error': #FF6961,
 );
 
 @function colour($colour-name) {
