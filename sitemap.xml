@@ -8,18 +8,23 @@
 
 
 <url>
-  <loc>https://cally2k.github.io/Portfolio/</loc>
-  <lastmod>2021-01-05T11:18:51+00:00</lastmod>
+  <loc>https://callumr.dev/</loc>
+  <lastmod>2021-05-18T07:39:28+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://cally2k.github.io/Portfolio/index.html</loc>
-  <lastmod>2021-01-05T11:18:51+00:00</lastmod>
+  <loc>https://callumr.dev/index.html</loc>
+  <lastmod>2021-05-18T07:39:28+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cally2k.github.io/Portfolio/CallumRafterCV.pdf</loc>
-  <lastmod>2021-01-05T11:18:51+00:00</lastmod>
+  <loc>https://callumr.dev/photography.html</loc>
+  <lastmod>2021-05-18T07:39:28+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://callumr.dev/CallumRafterCV.pdf</loc>
+  <lastmod>2021-05-18T07:39:27+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
